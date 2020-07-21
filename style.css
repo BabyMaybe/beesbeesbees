@@ -1,0 +1,150 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #4a2517;
+  overflow: hidden;
+  margin: 0;
+  animation: bgcolors 0.2s infinite;
+  flex-direction: column;
+}
+
+h1 {
+  animation: textcolors 0.4s infinite;
+  font-size: 100px;
+  font-family: "Monofett", cursive;
+  color: #f0715a;
+}
+
+h1:hover {
+  animation: inherit;
+  cursor: pointer;
+}
+
+.hex {
+  opacity: 1;
+  stroke-opacity: 1;
+  fill-opacity: 1;
+  paint-order: stroke fill markers;
+  stroke: #f0715a;
+  stroke-linecap: square;
+  stroke-width: 10;
+  fill: none;
+  /* animation: colors 6s infinite, spin 1s infinite, stroke-pulse 0.5s infinite alternate; */
+  animation: colors 0.3s infinite, stroke-pulse 0.3s infinite alternate, spin 10s infinite;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.hex:hover {
+  animation: colors 1s infinite, spin 1s infinite;
+}
+
+@keyframes colors {
+  from {
+    stroke: #f0715a;
+  }
+
+  16% {
+    stroke: #f28b53;
+  }
+
+  33% {
+    stroke: #ecba5e;
+  }
+
+  50% {
+    stroke: #5baa7f;
+  }
+
+  66% {
+    stroke: #6d84e4;
+  }
+
+  83% {
+    stroke: #a96bd8;
+  }
+
+  to {
+    stroke: #f0715a;
+  }
+}
+@keyframes bgcolors {
+  from {
+    background-color: #f0715a;
+  }
+
+  16% {
+    background-color: #f28b53;
+  }
+
+  33% {
+    background-color: #ecba5e;
+  }
+
+  50% {
+    background-color: #5baa7f;
+  }
+
+  66% {
+    background-color: #6d84e4;
+  }
+
+  83% {
+    background-color: #a96bd8;
+  }
+
+  to {
+    background-color: #f0715a;
+  }
+}
+@keyframes textcolors {
+  from {
+    color: #f0715a;
+  }
+
+  16% {
+    color: #f28b53;
+  }
+
+  33% {
+    color: #ecba5e;
+  }
+
+  50% {
+    color: #5baa7f;
+  }
+
+  66% {
+    color: #6d84e4;
+  }
+
+  83% {
+    color: #a96bd8;
+  }
+
+  to {
+    color: #f0715a;
+  }
+}
+
+@keyframes stroke-pulse {
+  from {
+    stroke-width: 1;
+  }
+
+  to {
+    stroke-width: 7;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(60deg);
+  }
+}
